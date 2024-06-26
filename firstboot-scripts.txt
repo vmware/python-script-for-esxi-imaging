@@ -1,0 +1,15 @@
+# Copyright 2024 Broadcom. All Rights Reserved.
+# SPDX-License-Identifier: BSD-2-Clause
+
+# Enable the SSH service.
+vim-cmd hostsvc/enable_ssh
+vim-cmd hostsvc/start_ssh
+
+# Enable the ESXi Shell.
+vim-cmd hostsvc/enable_esx_shell
+vim-cmd hostsvc/start_esx_shell
+
+# Generate a self-signed certificate and restart the hostd and vpxa services.
+/sbin/generate-certificates
+/etc/init.d/hostd restart && /etc/init.d/vpxa restart
+sleep 60
