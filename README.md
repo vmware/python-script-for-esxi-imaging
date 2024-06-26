@@ -76,7 +76,7 @@ To install ESXi, your system must meet specific requirements. Refer the [ESXi Re
 
    ```console
    git clone https://github.com/vmware/python-script-for-esxi-imaging.git
-   cd esxi-imaging
+   cd python-script-for-esxi-imaging
    ```
 
 3. Download the ESXi installer (ISO file) from your OEM or the [Broadcom Support Portal][kb-broadcom-downloads] and place the ISO file in the `esxi-imaging` directory.
@@ -143,6 +143,10 @@ You can use the [remote management applications][docs-esxi-install-remote-manage
   ```console
   python display-ks-content.py -i <your_generated_iso_file>
   ```
+   If you are using the [Photon OS sample appliance][download-sample-appliance], run the command with sudo.
+  ```console
+    sudo python display-ks-content.py -i <your_generated_iso_file>
+    ```
 
 ## Limitations
 
@@ -201,7 +205,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 [//]: Links
 [docs-esxi-install-remote-management-applications]: https://docs.vmware.com/en/VMware-vSphere/8.0/vsphere-esxi-installation/GUID-0E82A6CA-202A-4C5D-8811-53A7CF8D5CDC.html
 [docs-esxi-requirements]: https://docs.vmware.com/en/VMware-vSphere/8.0/vsphere-esxi-installation/GUID-DEB8086A-306B-4239-BF76-E354679202FC.html
-[download-sample-appliance]: https://via.vmw.com/vvs-appliance
+[download-sample-appliance]: https://broadcom.box.com/v/get-vvs-sample-appliance
 [gh-contributing]: CONTRIBUTING.md
 [sample-json]: re-image-hosts.json
 [gh-issues]: https://github.com/vmware/
