@@ -80,7 +80,7 @@ To install ESXi, your system must meet specific requirements. Refer the [ESXi Re
    ```
 
 3. Download the ESXi installer (ISO file) from your OEM or the [Broadcom Support Portal][kb-broadcom-downloads] and place the ISO file in the `esxi-imaging` directory.
-4. Modify the `re-image-hosts.json` file to update details like the ISO file name, MD5 checksum, network configuration, and installation disk.
+4. Modify the [`re-image-hosts.json`][sample-json] file to update details like the ISO file name, MD5 checksum, network configuration, and installation disk.
 
    | Information                  | Required or Optional   | Comments                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
    | ---------------------------- | ---------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -106,9 +106,9 @@ To install ESXi, your system must meet specific requirements. Refer the [ESXi Re
 
    If you are using the [Photon OS sample appliance][download-sample-appliance] and logged in as the `admin` user, run the command with sudo.
 
-    ```console
-    sudo python create-custom-iso.py -j re-image-hosts.json
-    ```
+   ```console
+   sudo python create-custom-iso.py -j re-image-hosts.json
+   ```
 
 7. Enter and confirm the password for the ESXi root account.
 
@@ -147,7 +147,6 @@ You can use the [remote management applications][docs-esxi-install-remote-manage
 ## Limitations
 
 - Does not support upgrades; only the installation scenario is supported.
-- Does not support images for installation on Data Processing Units (DPUs).
 
 ## Known Issues
 
@@ -204,6 +203,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 [docs-esxi-requirements]: https://docs.vmware.com/en/VMware-vSphere/8.0/vsphere-esxi-installation/GUID-DEB8086A-306B-4239-BF76-E354679202FC.html
 [download-sample-appliance]: https://via.vmw.com/vvs-appliance
 [gh-contributing]: CONTRIBUTING.md
+[sample-json]: re-image-hosts.json
 [gh-issues]: https://github.com/vmware/
 [vmware-cla-dco]: https://cla.vmware.com/dco
 [gh-sample-appliance]: https://github.com/vmware-samples/validated-solutions-for-cloud-foundation/tree/main/appliance
