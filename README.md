@@ -144,6 +144,7 @@ You can use the [remote management applications][docs-esxi-install-remote-manage
   python display-ks-content.py -i <your_generated_iso_file>
   ```
    If you are using the [Photon OS sample appliance][download-sample-appliance], run the command with sudo.
+   
   ```console
     sudo python display-ks-content.py -i <your_generated_iso_file>
     ```
