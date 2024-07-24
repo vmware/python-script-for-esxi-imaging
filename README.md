@@ -97,7 +97,7 @@ To install ESXi, your system must meet specific requirements. Refer the [ESXi Re
    | `mgmtGateway`                | Required for Static IP | Specifies the IPv4 default gateway for the ESXi host.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
    | `mgmtVlanId`                 | Required               | Specifies the VLAN for the ESXi host management network. Used with either DHCP or a static IP address.                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 
-5. If required, update the `firstboot-scripts.txt` file. Add the post-install commands that need to be run once the installation is completed. By default, SSH and ESXi shell are enabled. Additionally, the self-signed certificate on all ESXi hosts will be regenerated.
+5. Update the post-install commands in the [`firstboot-scripts.txt`][firstboot-scripts] file to be run after installation. The file includes examples of post-install commands.You can add or remove post-install commands based on your specific requirements. 
 6. Run the following command to generate the ISO file.
 
    ```console
@@ -209,6 +209,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 [download-sample-appliance]: https://broadcom.box.com/v/get-vvs-sample-appliance
 [gh-contributing]: CONTRIBUTING.md
 [sample-json]: re-image-hosts.json
+[firstboot-scripts]: firstboot-scripts.txt
 [gh-issues]: https://github.com/vmware/
 [vmware-cla-dco]: https://cla.vmware.com/dco
 [gh-sample-appliance]: https://github.com/vmware-samples/validated-solutions-for-cloud-foundation/tree/main/appliance
