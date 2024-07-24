@@ -9,6 +9,15 @@ vim-cmd hostsvc/start_ssh
 vim-cmd hostsvc/enable_esx_shell
 vim-cmd hostsvc/start_esx_shell
 
+# Add ntp settings
+esxcli system ntp set --enabled=true --server=time.vmware.com
+
+# Suppress shell warnings
+esxcli  system  settings advanced  set -i 1 -o /UserVars/SuppressShellWarning
+
+# Add vlan ID for VM Network 
+esxcli network vswitch standard portgroup set --portgroup-name "VM Network" --vlan-id 3061
+
 # Generate a self-signed certificate and restart the hostd and vpxa services.
 /sbin/generate-certificates
 /etc/init.d/hostd restart && /etc/init.d/vpxa restart
