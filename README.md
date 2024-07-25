@@ -53,6 +53,7 @@ To install ESXi, your system must meet specific requirements. Refer the [ESXi Re
     tdnf install -y \
       git \
       python3-pip \
+	  jq \
       cdrkit
     ```
 
@@ -96,9 +97,12 @@ To install ESXi, your system must meet specific requirements. Refer the [ESXi Re
    | `mgmtIpv4`                   | Required               | Specifies the IPv4 address for the ESXi host. <br/><br/>Examples:<br/><br/> 1. `"mgmtIpv4": "dhcp"`<br/> 2.`"mgmtIpv4": "172.16.11.101"`                                                                                                                                                                                                                                                                                                                                                                                                                              |
    | `mgmtGateway`                | Required for Static IP | Specifies the IPv4 default gateway for the ESXi host.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
    | `mgmtVlanId`                 | Required               | Specifies the VLAN for the ESXi host management network. Used with either DHCP or a static IP address.                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-
-5. Update the post-install commands in the [`firstboot-scripts.txt`][firstboot-scripts] file to be run after installation. The file includes examples of post-install commands.You can add or remove post-install commands based on your specific requirements. 
-6. Run the following command to generate the ISO file.
+5. Run the following command to validate the updated `re-image-hosts.json` file and remediate any error messages found.
+	```console
+   jq . re-image-hosts.json 1> /dev/null
+	``` 
+6. Update the post-install commands in the [`firstboot-scripts.txt`][firstboot-scripts] file to be run after installation. The file includes examples of post-install commands. You can add or remove post-install commands based on your specific requirements. 
+7. Run the following command to generate the ISO file.
 
    ```console
    python create-custom-iso.py -j re-image-hosts.json
@@ -110,7 +114,7 @@ To install ESXi, your system must meet specific requirements. Refer the [ESXi Re
    sudo python create-custom-iso.py -j re-image-hosts.json
    ```
 
-7. Enter and confirm the password for the ESXi root account.
+8. Enter and confirm the password for the ESXi root account.
 
 The script generates an ISO file with a timestamp that includes the kickstart file after successful validation. If the optional parameter `-s` or `--suffix` is specified in the command line, the given value will be appended to the output ISO file instead of the timestamp.
 
