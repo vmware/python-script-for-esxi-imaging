@@ -1,0 +1,58 @@
+{
+  "esxiIsoFileName": "VMware-VMvisor-Installer-8.0U3-24022510.x86_64.iso",
+  "isoMdSum": "3697929d94704ac495247cd3fcf1c4eb",
+  "AcceptEsxiLicenseAgreement": "Yes",
+  "EnableSSHShell": "No",
+  "DisableSSHWarning": "No",
+  "IsNestedESXi": "Yes",
+  "dns": [
+    "192.168.0.253"
+  ],
+  "ntp": [
+    "10.97.0.60",
+    "10.89.0.13"
+  ],
+  "dnsSuffix0": "zonkos.ict",
+  "hosts": [
+    {
+      "macAddress": "00:50:56:0b:2e:ee",
+      "hostName": "besxi01",
+      "mgmtIpv4": "172.16.11.150",
+      "clearPart": "--alldrives --overwritevmfs",
+      "installDisk": "local",
+      "mgmtNetmask": "255.255.255.0",
+      "mgmtGateway": "172.16.11.253",
+      "mgmtVlanId": "1611"
+    },
+    {
+      "macAddress": "00:50:56:0b:2e:ec",
+      "hostName": "besxi02",
+      "mgmtIpv4": "172.16.11.151",
+      "clearPart": "--alldrives --overwritevmfs",
+      "installDisk": "local",
+      "mgmtNetmask": "255.255.255.0",
+      "mgmtGateway": "172.16.11.253",
+      "mgmtVlanId": "1611"
+    },
+    {
+      "macAddress": "00:50:56:0b:2c:b1",
+      "hostName": "besxi03",
+      "mgmtIpv4": "172.16.11.152",
+      "clearPart": "--alldrives --overwritevmfs",
+      "installDisk": "local",
+      "mgmtNetmask": "255.255.255.0",
+      "mgmtGateway": "172.16.11.253",
+      "mgmtVlanId": "1611"
+    },
+    {
+      "macAddress": "00:50:56:0b:2e:f1",
+      "hostName": "besxi04",
+      "mgmtIpv4": "172.16.11.153",
+      "clearPart": "--alldrives --overwritevmfs",
+      "installDisk": "local",
+      "mgmtNetmask": "255.255.255.0",
+      "mgmtGateway": "172.16.11.253",
+      "mgmtVlanId": "1611"
+    }
+  ]
+}
