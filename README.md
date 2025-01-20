@@ -73,14 +73,14 @@ To install ESXi, your system must meet specific requirements. Refer the [ESXi Re
 ## Generating the ESXi ISO Image
 
 1. Use a Secure Shell (SSH) client to log in as the `root` user to the photon appliance at `<host_virtual_machine_fqdn>:22`.
-2. Clone the repository into a directory.
+2. Clone the repository into current directory.
 
    ```console
    git clone https://github.com/vmware/python-script-for-esxi-imaging.git
    cd python-script-for-esxi-imaging
    ```
 
-3. Download the ESXi installer (ISO file) from your OEM or the [Broadcom Support Portal][kb-broadcom-downloads] and place the ISO file in the `esxi-imaging` directory.
+3. Download the ESXi installer (ISO file) from your OEM or the [Broadcom Support Portal][kb-broadcom-downloads] and place the ISO file in the `python-script-for-esxi-imaging` directory that has been created during previous step.
 4. Modify the [`re-image-hosts.json`][sample-json] file to update details like the ISO file name, MD5 checksum, network configuration, and installation disk.
 
    | Information                  | Required or Optional   | Comments                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
