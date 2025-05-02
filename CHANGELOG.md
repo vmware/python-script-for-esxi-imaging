@@ -2,7 +2,6 @@
 
 ## v1.0.0
 
-> Release Date: 27 June 2024
+> Release Date: 2024-06-27
 
 - Initial Release
-
