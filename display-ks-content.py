@@ -1,5 +1,6 @@
-# Copyright 2024 Broadcom. All Rights Reserved.
-# SPDX-License-Identifier: BSD-2-Clause
+# © Broadcom. All Rights Reserved.
+# The term "Broadcom" refers to Broadcom Inc. and/or its subsidiaries.
+# SPDX-License-Identifier: MPL-2.0
 
 """
 This module provides functions for displaying the contents of the kickstart file of the specified ESXi installer ISO.
