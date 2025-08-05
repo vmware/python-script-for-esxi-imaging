@@ -38,7 +38,7 @@ for more details.
 
 ### ESXi
 
-- ESXi 7.0 or later.
+- ESXi 7.0, ESXi 8.0 and ESX 9.0.
 - The ESXi installer ISO image `VMware-VMvisor-Installer-x.x.x-XXXXXX.x86_64.iso`, where `x.x.x` is
   the version of ESXi you are installing, and `XXXXXX` is the build number of the installer ISO
   image.
