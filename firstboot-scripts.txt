@@ -10,7 +10,7 @@ vim-cmd hostsvc/enable_esx_shell
 vim-cmd hostsvc/start_esx_shell
 
 # Uncomment the line below and update the parameter to configure the NTP settings.
-# esxcli system ntp set --enabled=true --server=time.vmware.com
+# esxcli system ntp set --enabled=true --server=pool.ntp.org
 
 # Uncomment the line below to suppress shell warnings.
 # esxcli  system  settings advanced  set -i 1 -o /UserVars/SuppressShellWarning
